@@ -50,3 +50,13 @@ void pop()
         return data;
     }
 }
+
+int main()
+{
+    int input;
+    printf("1: Press 1 to push.\n");
+    printf("2: Press 2 to pop.\n");
+    printf("3: Press 3 to display stack.\n");
+    printf("0: Press 0 to exit.");
+    
+}
