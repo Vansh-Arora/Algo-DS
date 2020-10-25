@@ -23,7 +23,7 @@ int isFull()
 
 void enQueue(int data)
 {
-    if(isFull)
+    if(isFull())
         printf("Queue full, can't insert.\n");
     else
     {
@@ -36,7 +36,7 @@ void enQueue(int data)
 
 void deQueue()
 {
-    if(isEmpty)
+    if(isEmpty())
         printf("Queue Empty.\n");
     else
     {
@@ -48,7 +48,7 @@ void deQueue()
 
 void display()
 {
-    if(isEmpty)
+    if(isEmpty())
         printf("Queue Empty.\n");
     else
     {
@@ -56,4 +56,38 @@ void display()
         for(i=front;i<=rear;i++)
             printf("%d ",queue[i]);
     }
+}
+
+int main()
+{
+while(true)
+    {
+        int input;
+        printf("\n1: Press 1 to add in queue.\n");
+        printf("2: Press 2 to delete element from queue.\n");
+        printf("3: Press 3 to display queue.\n");
+        printf("0: Press 0 to exit.\n");
+        printf("Enter your choice: ");
+
+        scanf("%d",&input);
+        switch(input)
+        {
+            case 1:
+                int data;
+                printf("Enter data: ");
+                scanf("%d",&data);
+                enQueue(data);
+                break;
+            case 2:
+                deQueue();
+                break;
+            case 3:
+                display();
+                break;
+            case 0:
+                return 0;
+            default:
+                printf("Invalid input!");
+        }
+    }   
 }
