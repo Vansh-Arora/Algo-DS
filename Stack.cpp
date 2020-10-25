@@ -53,10 +53,30 @@ void pop()
 
 int main()
 {
-    int input;
-    printf("1: Press 1 to push.\n");
-    printf("2: Press 2 to pop.\n");
-    printf("3: Press 3 to display stack.\n");
-    printf("0: Press 0 to exit.");
-    
+    while(true)
+    {
+        int input;
+        printf("1: Press 1 to push.\n");
+        printf("2: Press 2 to pop.\n");
+        printf("3: Press 3 to display stack.\n");
+        printf("0: Press 0 to exit.");
+
+        scanf("%d",&input);
+        switch(input)
+        {
+            case 1:
+                push();
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                display();
+                break;
+            case 0:
+                return 0;
+            default:
+                printf("Invalid input!");
+        }
+    }   
 }
