@@ -45,3 +45,15 @@ void deQueue()
             rear = front = -1;
     }
 }
+
+void display()
+{
+    if(isEmpty)
+        printf("Queue Empty.\n");
+    else
+    {
+        int i;
+        for(i=front;i<=rear;i++)
+            printf("%d ",queue[i]);
+    }
+}
