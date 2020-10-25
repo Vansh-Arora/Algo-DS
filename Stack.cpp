@@ -22,9 +22,14 @@ int isFull()
 
 void display()
 {
-    int i;
-    for(i=0; i<=top; i++)
-        printf("%d ", stack[i]);
+    if(isEmpty())
+        printf("Stack is empty.\n");
+    else
+    {
+        int i;
+        for(i=0; i<=top; i++)
+            printf("%d ", stack[i]);
+    }
 }
 
 void push(int data)
@@ -57,10 +62,11 @@ int main()
     while(true)
     {
         int input;
-        printf("1: Press 1 to push.\n");
+        printf("\n1: Press 1 to push.\n");
         printf("2: Press 2 to pop.\n");
         printf("3: Press 3 to display stack.\n");
-        printf("0: Press 0 to exit.");
+        printf("0: Press 0 to exit.\n");
+        printf("Enter your choice: ");
 
         scanf("%d",&input);
         switch(input)
