@@ -7,7 +7,7 @@ int rear = -1;
 
 int isEmpty()
 {
-    if(rear == front)
+    if(front == -1)
         return 1;
     else 
         return 0;
@@ -15,8 +15,33 @@ int isEmpty()
 
 int isFull()
 {
-    if(front == n-1)
+    if(rear == n-1)
         return 1;
     else
         return 0;
+}
+
+void enQueue(int data)
+{
+    if(isFull)
+        printf("Queue full, can't insert.\n");
+    else
+    {
+        if(front == -1)
+            front = 0;
+        rear++;
+        queue[rear] = data;
+    }
+}
+
+void deQueue()
+{
+    if(isEmpty)
+        printf("Queue Empty.\n");
+    else
+    {
+        front++;
+        if(front>rear)
+            rear = front = -1;
+    }
 }
