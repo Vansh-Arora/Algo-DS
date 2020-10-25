@@ -1,4 +1,4 @@
-#include<iostream.h>
+#include<iostream>
 
 int stack[10];
 int n = 10;
@@ -27,7 +27,7 @@ void display()
         printf("%d ", stack[i]);
 }
 
-int push(int data)
+void push(int data)
 {
     if(isFull())
         printf("Stack is full, can't insert.");
@@ -38,7 +38,7 @@ int push(int data)
     }
 }
 
-void pop()
+int pop()
 {
     if(isEmpty())
         printf("Stack is already empty.");
@@ -49,6 +49,7 @@ void pop()
         top -= 1;
         return data;
     }
+    return 0;
 }
 
 int main()
@@ -65,7 +66,10 @@ int main()
         switch(input)
         {
             case 1:
-                push();
+                int data;
+                printf("Enter data: ");
+                scanf("%d",&data);
+                push(data);
                 break;
             case 2:
                 pop();
