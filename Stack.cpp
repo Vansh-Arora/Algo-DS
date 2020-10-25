@@ -52,9 +52,8 @@ int pop()
         int data;
         data = stack[top];
         top -= 1;
-        return data;
     }
-    return 0;
+    return NULL;
 }
 
 int main()
