@@ -8,3 +8,7 @@ or **First in Last Out (FILO)**.
 ### Operations on stack
 **Push:** Insering an element in stack.
 **Pop:** Deleting an element from stack.
+
+#### Conditions to lookout for
+**Underflow**: Trying to pop an element from an empty stack.
+**Overflow**: Trying to push an element in a full stack.
