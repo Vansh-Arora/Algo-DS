@@ -6,9 +6,9 @@ Last element inserted is the first element to be deleted. Hence, it is called **
 or **First in Last Out (FILO)**.
 
 ### Operations on stack
-**Push:** Insering an element in stack.
+**Push:** Insering an element in stack.</br>
 **Pop:** Deleting an element from stack.
 
 #### Conditions to lookout for
-**Underflow**: Trying to pop an element from an empty stack.
+**Underflow**: Trying to pop an element from an empty stack.</br>
 **Overflow**: Trying to push an element in a full stack.
