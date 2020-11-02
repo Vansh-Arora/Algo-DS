@@ -50,9 +50,17 @@ int getTop()
         printf("Stack empty.\n");
         return INT_MIN;}
     else
-        return top;
+        return stack[top];
 }
-//int size()
+
+int size()
+{
+    if(isEmpty())
+        return 0;
+    else
+        return top+1;
+}
+
 
 int main()
 {
@@ -64,6 +72,7 @@ int main()
         printf("2: Press 2 to pop.\n");
         printf("3: Press 3 to display stack.\n");
         printf("4: Press 4 to get top.\n");
+        printf("5: Press 5 to get current stack size.\n");
         printf("0: Press 0 to exit.\n");
         printf("Enter your choice: ");
 
@@ -85,8 +94,11 @@ int main()
                 break;
 
             case 4:
-                if(!isEmpty())
-                    printf("Top: %d",getTop());
+                printf("Top: %d\n",getTop());
+                break;
+
+            case 5:
+                printf("Stack size: %d\n",size());
                 break;
 
             case 0:
