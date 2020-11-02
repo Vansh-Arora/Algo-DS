@@ -17,7 +17,7 @@ or **First in Last Out (FILO)**.
 **Time Complexity**
 
 **Push**:O(1)</br>
-**Pop**:O(1)
+**Pop**:O(1)</br>
 **isEmpty**:O(1)</br>
 **isFull**:O(1)</br>
 **getTop**:O(1)</br>
