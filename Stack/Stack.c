@@ -1,4 +1,4 @@
-#include<iostream>
+#include<stdio.h>
 
 int stack[10];
 int n = 10;
@@ -8,16 +8,14 @@ int isEmpty()
 {
     if(top == -1)
         return 1;
-    else 
-        return 0;
+    return 0;
 }
 
 int isFull()
 {
     if(top == n-1)
         return 1;
-    else
-        return 0;
+    return 0;
 }
 
 void display()
@@ -26,8 +24,7 @@ void display()
         printf("Stack is empty.\n");
     else
     {
-        int i;
-        for(i=0; i<=top; i++)
+        for(int i=0; i<=top; i++)
             printf("%d ", stack[i]);
     }
 }
@@ -37,24 +34,19 @@ void push(int data)
     if(isFull())
         printf("Stack is full, can't insert.");
     else
-    {
-        top += 1;
-        stack[top] = data;
-    }
+        stack[++top] = data;
 }
 
-int pop()
+void pop()
 {
     if(isEmpty())
-        printf("Stack is already empty.");
+        printf("Stack underflow.");
     else
-    {
-        int data;
-        data = stack[top];
-        top -= 1;
-    }
-    return NULL;
+        printf("Popped element %d\n",stack[top--]);
 }
+
+//int top()
+//int size()
 
 int main()
 {
@@ -76,14 +68,18 @@ int main()
                 scanf("%d",&data);
                 push(data);
                 break;
+
             case 2:
                 pop();
                 break;
+
             case 3:
                 display();
                 break;
+
             case 0:
                 return 0;
+                
             default:
                 printf("Invalid input!");
         }
