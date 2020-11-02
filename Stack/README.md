@@ -21,3 +21,5 @@ or **First in Last Out (FILO)**.
 **isFull**:    O(1)</br>
 **getTop**:    O(1)</br>
 **size**:      O(1)</br>
+
+**Space Complexity**: O(n)</br>
