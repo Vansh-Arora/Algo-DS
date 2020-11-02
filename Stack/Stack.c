@@ -1,7 +1,8 @@
 #include<stdio.h>
 #include<limits.h>
-int stack[10];
-int n = 10;
+
+#define MAXSIZE 10
+int stack[MAXSIZE];
 int top = -1;
 
 int isEmpty()
@@ -11,7 +12,7 @@ int isEmpty()
 
 int isFull()
 {
-    return (top == n-1);
+    return (top == MAXSIZE-1);
 }
 
 void display()
