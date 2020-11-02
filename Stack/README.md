@@ -24,3 +24,6 @@ or **First in Last Out (FILO)**.
 **size**:O(1)</br>
 
 **Space Complexity**: O(n)
+
+### Limitations
+Maximum size of the stack has to be pre-defined and it can't be changed later.
