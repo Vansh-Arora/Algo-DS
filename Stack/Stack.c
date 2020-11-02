@@ -47,9 +47,11 @@ int pop()
 
 int getTop()
 {
-    if(isEmpty()){
+    if(isEmpty())
+    {
         printf("Stack empty.\n");
-        return INT_MIN;}
+        return INT_MIN;
+    }
     else
         return stack[top];
 }
