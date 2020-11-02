@@ -6,16 +6,12 @@ int top = -1;
 
 int isEmpty()
 {
-    if(top == -1)
-        return 1;
-    return 0;
+    return (top == -1);
 }
 
 int isFull()
 {
-    if(top == n-1)
-        return 1;
-    return 0;
+    return (top == n-1);
 }
 
 void display()
@@ -50,7 +46,8 @@ void pop()
 
 int main()
 {
-    while(true)
+    int data;
+    while(1)
     {
         int input;
         printf("\n1: Press 1 to push.\n");
@@ -63,7 +60,6 @@ int main()
         switch(input)
         {
             case 1:
-                int data;
                 printf("Enter data: ");
                 scanf("%d",&data);
                 push(data);
