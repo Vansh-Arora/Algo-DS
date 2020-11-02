@@ -13,3 +13,14 @@ or **First in Last Out (FILO)**.
 **Underflow**: Trying to pop an element from an empty stack.</br>
 **Overflow**: Trying to push an element in a full stack.
 
+### Performance
+**Time Complexity**
+
+**Push**:O(1)</br>
+**Pop**:O(1)
+**isEmpty**:O(1)</br>
+**isFull**:O(1)</br>
+**getTop**:O(1)</br>
+**size**:O(1)</br>
+
+**Space Complexity**: O(n)
