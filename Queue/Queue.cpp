@@ -29,8 +29,7 @@ void enQueue(int data)
     {
         if(front == -1)
             front = 0;
-        rear++;
-        queue[rear] = data;
+        queue[++rear] = data;
     }
 }
 
@@ -40,8 +39,7 @@ void deQueue()
         printf("Queue Empty.\n");
     else
     {
-        front++;
-        if(front>rear)
+        if(++front>rear)
             rear = front = -1;
     }
 }
